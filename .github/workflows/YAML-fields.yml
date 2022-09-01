@@ -8,4 +8,5 @@ jobs:
     name: echo YAML field presence
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: bash title_simpler.sh
