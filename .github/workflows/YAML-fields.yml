@@ -8,5 +8,5 @@ jobs:
     name: echo YAML field presence
     runs-on: ubuntu-latest
     steps:
-    - working-directory: /testing_actions
+    - working-directory: testing_actions/
       run: bash title_simpler.sh
