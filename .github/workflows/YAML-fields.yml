@@ -1,0 +1,12 @@
+name: echo YAML field presence
+on:
+  pull_request:
+    types: [opened, synchronize]
+      
+jobs:
+  build:
+    name: echo YAML field presence
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: bash title_simpler.sh
