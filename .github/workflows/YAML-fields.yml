@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - working-directory: .
-    - run: bash title_simpler.sh
+      run: bash title_simpler.sh
