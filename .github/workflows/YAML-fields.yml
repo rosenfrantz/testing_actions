@@ -1,0 +1,10 @@
+name: echo YAML field presence
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  build:
+    name: echo YAML field presence
+    runs-on: ubuntu-latest
+    steps:
+      - run: bash title_simpler.sh
