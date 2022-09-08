@@ -1,14 +1,14 @@
-FIELDS="title:"
+FIELDS="title: email:" #declaring the fields I want it to look for 
 for FILE in * 
 do
-    if [[ -s $FILE.md && "$FILE" != "README.md" ]]
+    if [[ $FILE == *.md && $FILE != README.md ]] # restricts only to markdown files OTHER than README (which does not have YAML) ignoring .sh or any other future commited files
         then
-            for FIELD in $FIELDS
-                do
-                   grep -m 1 $FIELDS
-                    if 
+            for FIELD in $FIELDS 
+                do 
+                    if grep -m  1 -Rq "$FIELD" "$FILE" # find instance of the given field in the file -- returns the line if found, returns nothing if not
+                        then echo "true" # if something returned (ie, field found) echo true
+                            else echo "false"
+                    fi
                 done
     fi
 done
-
-# this file does not currently work as it stands, and for the time being, I'm going to move toward trying something much simpler (even though this was already what I thought was a "simple attempt"), then slowly escalating complexity
