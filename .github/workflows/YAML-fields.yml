@@ -1,4 +1,4 @@
-name: echo YAML field presence
+name: check for all necessary YAML fields
 on:
   pull_request:
     types: [opened, synchronize]
